@@ -16,7 +16,7 @@ class ListAllUsersUseCase {
     }
 
     if (!user.admin) {
-      throw new Error("Access Denied! User is not admin.");
+      throw new Error("You need to be an administrator to list all users.");
     }
 
     return this.usersRepository.list();
